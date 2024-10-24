@@ -14,6 +14,6 @@ USER_PASS_CODE = hashlib.sha256(f'{USER_USERNAME}{USER_PASS_HASH}'.encode()).hex
 class ServiceMock:
     """Mock implementation of the service."""
 
-    def is_authorized(self, auth_code: str) -> str:
+    def is_authorized(self, auth_code: str) -> bool:
         """Get the owner of a given token."""
         return (auth_code in [ADMIN_AUTH_CODE, USER_PASS_CODE])

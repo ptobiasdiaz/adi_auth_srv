@@ -15,4 +15,4 @@ jobs:
                 pip install .[tests]
             - name: Run pytest
               run: |
-                pytest --cov=authsrv
+                pytest --cov=authsrv --cov-report=term-missing

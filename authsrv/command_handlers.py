@@ -16,4 +16,3 @@ def create_app():
 def run_server():
     """Instance flask app and run it."""
     return create_app().run(host='0.0.0.0', port=3001, debug=True)
-

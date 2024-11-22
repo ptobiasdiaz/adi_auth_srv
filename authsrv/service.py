@@ -16,4 +16,8 @@ class ServiceMock:
 
     def is_authorized(self, auth_code: str) -> bool:
         """Get the owner of a given token."""
-        return (auth_code in [ADMIN_AUTH_CODE, USER_PASS_CODE])
+        if auth_code == ADMIN_AUTH_CODE:
+            return ["admin", "user"]
+        elif auth_code == USER_PASS_CODE:
+            return ["user"]
+        return None
